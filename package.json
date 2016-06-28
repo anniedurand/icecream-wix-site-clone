@@ -1,0 +1,23 @@
+{
+  "name": "icecream-wix-site-clone",
+  "version": "1.0.0",
+  "description": "Icecream Wix site clone - HTML / CSS / SASS practice",
+  "main": "index.html",
+  "dependencies": {
+    "normalize.css": "^4.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poe21/icecream-wix-site-clone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/poe21/icecream-wix-site-clone/issues"
+  },
+  "homepage": "https://github.com/poe21/icecream-wix-site-clone#readme"
+}
