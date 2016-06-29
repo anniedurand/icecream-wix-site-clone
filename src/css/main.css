@@ -8,7 +8,7 @@ html {
 body {
   max-width: 76.6vw;
   margin: 0 auto;
-  font-family: 'Ubuntu Condensed', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 a {
@@ -17,6 +17,7 @@ a {
 
 .top-addr {
   text-align: center;
+  font-family: 'Ubuntu Condensed', sans-serif;
   background-color: #242323;
   color: #fff;
   height: 9.7vh;
@@ -24,8 +25,8 @@ a {
   font-size: 1em;
 }
 
-.yellow {
-  height: 124vh;
+.fst-section {
+  height: 120vh;
   background-color: #F9DB79;
   position: relative;
 }
@@ -48,6 +49,7 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 0.7em 0 0 0;
+  font-family: 'Ubuntu Condensed', sans-serif;
 }
 
 .nav-links {
@@ -66,7 +68,6 @@ nav {
 }
 
 .nav-socmedia {
-  /*width: 360px;*/
   text-align: right;
   padding-right: 0.5em;
 }
@@ -82,7 +83,7 @@ nav {
   margin: 0 0.8em 0 0;
 }
 
-.yellow img {
+.fst-section img {
   height: auto;
   max-width: 31%;
   margin: 6vh auto 0 auto;
@@ -90,7 +91,6 @@ nav {
 }
 
 .glacerie {
-  font-family: 'Roboto Condensed', sans-serif;
   z-index: 1;
   color: #fff;
   position: absolute;
@@ -118,25 +118,78 @@ nav {
   color: #fff;
   font-size: 1.9vw;
   font-weight: normal;
-  margin: 0;
+  margin: 5vh 0 0 0;
   border: 2px solid #fff;
   padding: 0.2em 1.5em 0.2em 1.5em;
   cursor: pointer;
   outline: none;
-  transition: 0.2s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 
-.btn:hover {
+.btn-black {
+  color: #242323;
+  border: 2px solid #242323;
+}
+
+.btn:hover, .btn-black:hover {
+  color: #fff;
   background-color: #242323;
   border: 2px solid #242323;
 } 
 
 .btn--menu {
   position: absolute;
+  margin: 0;
   top: 95vh;
-  left: 33vw;
+  left: 33.1vw;
   z-index: 1;
 }
+
+.scnd-section {
+  height: 100vh;
+  display: flex;
+}
+
+.scnd-img {
+  width: 50%;
+  overflow: hidden;
+}
+
+.scnd-img img {
+  height: 100vh;
+}
+
+.scnd-text {;
+  width: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.scnd-text h2 {
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 3vw;
+}
+
+.scnd-text h3 {
+  font-family: 'Satisfy', cursive;
+  font-size: 1.7vw;
+  margin: -3.8vh 0 0 0;
+}
+
+.scnd-text p {
+  width: 75%;
+  margin: 7vh auto 3vh auto;
+  line-height: 4vh;
+  text-align: justify;
+  text-align-last: center;
+  -moz-text-align-last: center;
+  -webkit-text-align-last: center;
+}
+
+/* -------------------------------- MEDIA QUERIES --------------------------------------------*/
 
 @media screen and (min-width : 695px) and (max-width : 1165px) {
   .logo {
@@ -145,11 +198,11 @@ nav {
     font-size: 4vw;
   }
   
-  .yellow {
+  .fst-section {
     height: 145vh;
   }
   
-  .yellow img {
+  .fst-section img {
     max-width: 35%;
     margin: 14vh auto 0 auto;
   }
@@ -183,11 +236,11 @@ nav {
     justify-content: flex-end;
   }
   
-  .yellow {
+  .fst-section {
     height: 145vh;
   }
   
-  .yellow img {
+  .fst-section img {
     max-width: 45%;
     margin: 14vh auto 0 auto;
   }
@@ -238,7 +291,7 @@ nav {
     font-size: 8vw;
   }
   
-  .yellow img {
+  .fst-section img {
     max-width: 50%;
     margin: 8vh auto 0 auto;
   }
