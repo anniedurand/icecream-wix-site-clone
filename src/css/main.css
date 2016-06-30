@@ -158,12 +158,9 @@ ul, li, nav {
 }
 
 .scnd-section--img {
+  background: url('../img/fallen-icecream.jpg') no-repeat right;
+  background-size: auto 100%;
   width: 50%;
-  overflow: hidden;
-}
-
-.scnd-section--img img {
-  height: 100vh;
 }
 
 .scnd-section--text {
@@ -355,11 +352,6 @@ ul, li, nav {
   .scnd-section--img {
     width: 100%;
     flex: 3;
-  }
-  
-  .scnd-section--img img {
-  /*   height: 40%; /* ok on small windowed browser */
-    height: 100%;  /* ok on phone browser */
   }
 
   .scnd-section--text {
