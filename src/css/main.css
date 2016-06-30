@@ -15,25 +15,6 @@ a, a:active, a:focus {
   text-decoration: none;
 }
 
-.top-addr {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-family: 'Ubuntu Condensed', sans-serif;
-  background-color: #242323;
-  color: #fff;
-  height: 9.7vh;
-  padding: 3.2vh 0 3.2vh 0;
-  font-size: 1em;
-}
-
-.fst-section {
-  height: 125vh;
-  background-color: #F9DB79;
-  position: relative;
-}
-
 ul, li, nav {
   display: inline;
 }
@@ -100,20 +81,32 @@ ul, li, nav {
   margin: 0 0.8em 0 0;
 }
 
-.fst-section img {
-  height: auto;
-  max-width: 31%;
-  margin: 0 auto;
-  padding-top: 6vh;
-  display: block;
+.top-addr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  background-color: #242323;
+  color: #fff;
+  height: 9.7vh;
+  padding: 3.2vh 0 3.2vh 0;
+  font-size: 1em;
+}
+
+.fst-section {
+  height: 125vh;
+  background: #F9DB79 url('../img/pink-icecream.png') no-repeat;
+  background-position: center 60%;
+  background-size: auto 75%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .glacerie {
-  z-index: 1;
   color: #fff;
-  position: absolute;
-  top: 55vh;
-  left: 3.5vw;
   text-align: center;
 }
 
@@ -137,7 +130,6 @@ ul, li, nav {
   color: #fff;
   font-size: 1.9vw;
   font-weight: normal;
-  /*margin: 5vh 0 0 0;*/
   border: 2px solid #fff;
   padding: 0.2em 1.5em 0.2em 1.5em;
   cursor: pointer;
@@ -148,6 +140,10 @@ ul, li, nav {
 .btn-black {
   color: #242323;
   border: 2px solid #242323;
+}
+
+.btn--menu {
+  margin-bottom: 25vh;
 }
 
 .btn:hover, .btn-black:hover {
@@ -182,19 +178,19 @@ ul, li, nav {
   margin-top: 0;
   text-transform: uppercase;
   font-weight: normal;
-  font-size: 3vw;
+  font-size: 2.4em;
 }
 
 .scnd-section--text h3 {
   font-family: 'Satisfy', cursive;
-  font-size: 1.7vw;
+  font-size: 1.3em;
   margin: -3.8vh 0 0 0;
 }
 
 .scnd-section--text p {
   width: 75%;
   margin: 7vh auto 7vh auto;
-  line-height: 4vh;
+  line-height: 1.6em;
   text-align: justify;
   text-align-last: center;
   -moz-text-align-last: center;
@@ -212,12 +208,8 @@ ul, li, nav {
   }
   
   .fst-section {
-    height: 140vh;
-  }
-  
-  .fst-section img {
-    max-width: 37%;
-    padding-top: 14vh;
+    background-position: center 60%;
+    background-size: auto 65%;
   }
   
   .glacerie h2 {
@@ -227,22 +219,35 @@ ul, li, nav {
   .btn {
     font-size: 2.2vw;
   }
-  
-  .btn--menu {
-    top: 91vh;
-    left: 32vw;
-  }
 }
 
 @media screen and (max-width: 1000px) {
   .fst-section {
-    height: 125vh;
+    height: 120vh;
+  }
+  
+  .btn--menu {
+    margin-bottom: 30vh;
   }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 900px) {
   .fst-section {
     height: 115vh;
+  }
+  
+  .btn--menu {
+    margin-bottom: 30vh;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .fst-section {
+    height: 105vh;
+  }
+  
+  .btn--menu {
+    margin-bottom: 30vh;
   }
 }
 
@@ -267,17 +272,8 @@ ul, li, nav {
   }
   
   .fst-section {
-    height: 105vh;
-  }
-  
-  .fst-section img {
-    max-width: 40%;
-    padding-top: 8vh;
-  }
-  
-  .glacerie {
-    top: 38vh;
-    left: 6vw;
+    background-position: center;
+    justify-content: center;
   }
   
   .glacerie h1 {
@@ -291,6 +287,10 @@ ul, li, nav {
   .btn {
     font-size: 4.5vw;
     padding: 0.3em 2.2em 0.3em 2.2em;
+  }
+  
+  .btn--menu {
+    margin-bottom: 0;
   }
   
   .scnd-section--text h2 {
@@ -347,16 +347,6 @@ ul, li, nav {
     font-size: 2em;
   }
   
-  .fst-section img {
-    max-width: 52%;
-    margin: 0 auto;
-    padding-top: 5vh;
-  }
-  
-  .glacerie {
-    top: 30vh;
-  }
-  
   .scnd-section {
     height: 130vh;
     flex-direction: column-reverse;
@@ -388,14 +378,6 @@ ul, li, nav {
 }
 
 @media screen and (max-width: 380px) {
-  .fst-section img {
-    padding-top: 12vh;
-  }
-  
-  .glacerie {
-    top: 35vh;
-  }
-  
   .fst-section h2 {
     font-size: 7vw;
   }
