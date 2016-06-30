@@ -11,11 +11,14 @@ body {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
-a {
+a, a:active, a:focus {
   text-decoration: none;
 }
 
 .top-addr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   font-family: 'Ubuntu Condensed', sans-serif;
   background-color: #242323;
@@ -26,7 +29,7 @@ a {
 }
 
 .fst-section {
-  height: 120vh;
+  height: 125vh;
   background-color: #F9DB79;
   position: relative;
 }
@@ -38,6 +41,20 @@ ul, li, nav {
 .logo {
   font-family: 'Satisfy', cursive;
   font-weight:bold;
+  font-size: 6vw;
+}
+
+.nav-responsive {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  height: 12vh;
+}
+
+.logo-browser {
+  font-family: 'Satisfy', cursive;
+  font-weight:bold;
   font-size: 3vw;
   padding-top: 0.2em;
   position: absolute;
@@ -45,7 +62,7 @@ ul, li, nav {
   left: 32.5vw;
 }
 
-nav {
+.nav-browser {
   display: flex;
   justify-content: space-between;
   padding: 0.7em 0 0 0;
@@ -63,7 +80,7 @@ nav {
   padding: 1.25em 0 0 1.25em;
 }
 
-.nav-links a, .logo a {
+.nav-links a, .logo a, .logo-browser a {
   color: #242323;
 }
 
@@ -86,7 +103,8 @@ nav {
 .fst-section img {
   height: auto;
   max-width: 31%;
-  margin: 6vh auto 0 auto;
+  margin: 0 auto;
+  padding-top: 6vh;
   display: block;
 }
 
@@ -99,16 +117,17 @@ nav {
   text-align: center;
 }
 
-.glacerie h2 {
-  font-size: 2.8vw;
-  margin: 0;
-}
-
 .glacerie h1 {
   font-size: 13vw;
   font-weight: bold;
-  margin: 0;
+  margin: -1vh 0 0 0;
   letter-spacing: 0.15em;
+}
+
+.glacerie h2 {
+  font-size: 2.8vw;
+  font-weight: normal;
+  margin: 0;
 }
 
 .btn {
@@ -118,7 +137,7 @@ nav {
   color: #fff;
   font-size: 1.9vw;
   font-weight: normal;
-  margin: 5vh 0 0 0;
+  /*margin: 5vh 0 0 0;*/
   border: 2px solid #fff;
   padding: 0.2em 1.5em 0.2em 1.5em;
   cursor: pointer;
@@ -137,29 +156,21 @@ nav {
   border: 2px solid #242323;
 } 
 
-.btn--menu {
-  position: absolute;
-  margin: 0;
-  top: 95vh;
-  left: 33.1vw;
-  z-index: 1;
-}
-
 .scnd-section {
   height: 100vh;
   display: flex;
 }
 
-.scnd-img {
+.scnd-section--img {
   width: 50%;
   overflow: hidden;
 }
 
-.scnd-img img {
+.scnd-section--img img {
   height: 100vh;
 }
 
-.scnd-text {;
+.scnd-section--text {
   width: 50%;
   text-align: center;
   display: flex;
@@ -167,21 +178,22 @@ nav {
   justify-content: center;
 }
 
-.scnd-text h2 {
+.scnd-section--text h2 {
+  margin-top: 0;
   text-transform: uppercase;
   font-weight: normal;
   font-size: 3vw;
 }
 
-.scnd-text h3 {
+.scnd-section--text h3 {
   font-family: 'Satisfy', cursive;
   font-size: 1.7vw;
   margin: -3.8vh 0 0 0;
 }
 
-.scnd-text p {
+.scnd-section--text p {
   width: 75%;
-  margin: 7vh auto 3vh auto;
+  margin: 7vh auto 7vh auto;
   line-height: 4vh;
   text-align: justify;
   text-align-last: center;
@@ -189,22 +201,23 @@ nav {
   -webkit-text-align-last: center;
 }
 
+
 /* -------------------------------- MEDIA QUERIES --------------------------------------------*/
 
 @media screen and (min-width : 695px) and (max-width : 1165px) {
-  .logo {
+  .logo-browser {
     top: 12vh;
     left: 30.5vw;
     font-size: 4vw;
   }
   
   .fst-section {
-    height: 145vh;
+    height: 140vh;
   }
   
   .fst-section img {
-    max-width: 35%;
-    margin: 14vh auto 0 auto;
+    max-width: 37%;
+    padding-top: 14vh;
   }
   
   .glacerie h2 {
@@ -216,52 +229,84 @@ nav {
   }
   
   .btn--menu {
-    top: 90vh;
+    top: 91vh;
     left: 32vw;
   }
 }
 
-@media screen and (min-width : 480px) and (max-width : 695px) {
-  .logo {
-    top: 12vh;
-    left: 26vw;
-    font-size: 6vw;
-  }
-  
-  .nav-links {
-    display: none;
-  }
-  
-  nav {
-    justify-content: flex-end;
-  }
-  
+@media screen and (max-width: 1000px) {
   .fst-section {
-    height: 145vh;
-  }
-  
-  .fst-section img {
-    max-width: 45%;
-    margin: 14vh auto 0 auto;
-  }
-  
-  .glacerie h2 {
-    font-size: 4vw;
-  }
-  
-  .btn {
-    font-size: 2.8vw;
-  }
-  
-  .btn--menu {
-    top: 80vh;
-    left: 30.5vw;
+    height: 125vh;
   }
 }
 
-@media screen and (max-width : 585px) {
+@media screen and (max-width: 850px) {
+  .fst-section {
+    height: 115vh;
+  }
+}
+
+@media screen and (max-width : 695px) {
+  
   body {
     max-width: 100vw;
+  }
+  
+  .logo-browser {
+    top: 12vh;
+    left: 26vw;
+    font-size: 3em;
+  }
+  
+  .nav-browser {
+    display: none;
+  }
+  
+  .nav-responsive {
+    display: flex;
+  }
+  
+  .fst-section {
+    height: 105vh;
+  }
+  
+  .fst-section img {
+    max-width: 40%;
+    padding-top: 8vh;
+  }
+  
+  .glacerie {
+    top: 38vh;
+    left: 6vw;
+  }
+  
+  .glacerie h1 {
+    font-size: 16vw;
+  }
+  
+  .glacerie h2 {
+    font-size: 5.5vw;
+  }
+  
+  .btn {
+    font-size: 4.5vw;
+    padding: 0.3em 2.2em 0.3em 2.2em;
+  }
+  
+  .scnd-section--text h2 {
+    font-size: 5vw;
+  }
+  
+  .scnd-section--text h3 {
+    font-size: 3vw;
+  }
+
+}
+
+@media screen and (max-width : 585px) {
+
+  .fst-section {
+    height: 90vh;
   }
   
   .top-addr {
@@ -273,47 +318,89 @@ nav {
     display: block;
   }
   
-  .top-addr span.pipe {
+  .top-addr .pipe {
     display: none;
   }
   
-  nav {
-    justify-content: flex-end;
+}
+
+@media screen and (max-width: 480px) {
+  
+  .top-addr {
+    font-size: 0.8em;
+    height: 8.5vh;
+    line-height: 1.3em;
+    padding: 0;
+    letter-spacing: 0.08em;
   }
   
-  .nav-links {
+  .nav-browser {
     display: none;
+  }
+  
+  .nav-responsive {
+    display: flex;
+    height: 10vh;
   }
   
   .logo {
-    top: 10vh;
-    left: 32vw;
-    font-size: 8vw;
+    font-size: 2em;
   }
   
   .fst-section img {
-    max-width: 50%;
-    margin: 8vh auto 0 auto;
+    max-width: 52%;
+    margin: 0 auto;
+    padding-top: 5vh;
   }
   
   .glacerie {
-    left: 6vw;
+    top: 30vh;
   }
   
-  .glacerie h1 {
-    font-size: 16vw;
+  .scnd-section {
+    height: 130vh;
+    flex-direction: column-reverse;
   }
   
-  .glacerie h2 {
-    font-size: 6vw;
+  .scnd-section--img {
+    width: 100%;
+    flex: 3;
+  }
+  
+  .scnd-section--img img {
+  /*   height: 40%; /* ok on small windowed browser */
+    height: 100%;  /* ok on phone browser */
+  }
+
+  .scnd-section--text {
+    width: 100%;
+    flex: 5;
+  }
+  
+  .scnd-section--text h2 {
+    font-size: 8vw;
+  }
+
+  .scnd-section--text h3 {
+    font-size: 6.2vw;
+    font-weight: normal;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .fst-section img {
+    padding-top: 12vh;
+  }
+  
+  .glacerie {
+    top: 35vh;
+  }
+  
+  .fst-section h2 {
+    font-size: 7vw;
   }
   
   .btn {
-    font-size: 4vw;
-  }
-  
-  .btn--menu {
-    top: 80vh;
-    left: 37vw;
+    font-size: 5.5vw;
   }
 }
