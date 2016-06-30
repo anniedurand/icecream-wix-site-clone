@@ -105,19 +105,21 @@ ul, li, nav {
   justify-content: space-between;
 }
 
-.glacerie {
+.glacerie, .trd-section--text {
   color: #fff;
   text-align: center;
 }
 
-.glacerie h1 {
+.glacerie h1, .trd-section--text h1 {
+  text-transform: uppercase;
   font-size: 13vw;
   font-weight: bold;
   margin: -1vh 0 0 0;
   letter-spacing: 0.15em;
 }
 
-.glacerie h2 {
+.glacerie h2, .trd-section--text h2 {
+  text-transform: uppercase;
   font-size: 2.8vw;
   font-weight: normal;
   margin: 0;
@@ -152,7 +154,7 @@ ul, li, nav {
   border: 2px solid #242323;
 } 
 
-.scnd-section {
+.scnd-section, .frth-section {
   height: 100vh;
   display: flex;
 }
@@ -163,7 +165,7 @@ ul, li, nav {
   width: 50%;
 }
 
-.scnd-section--text {
+.scnd-section--text, .frth-section--text {
   width: 50%;
   text-align: center;
   display: flex;
@@ -171,20 +173,20 @@ ul, li, nav {
   justify-content: center;
 }
 
-.scnd-section--text h2 {
+.scnd-section--text h2, .frth-section--text h2 {
   margin-top: 0;
   text-transform: uppercase;
   font-weight: normal;
   font-size: 2.4em;
 }
 
-.scnd-section--text h3 {
+.scnd-section--text h3, .frth-section--text h3 {
   font-family: 'Satisfy', cursive;
   font-size: 1.3em;
   margin: -3.8vh 0 0 0;
 }
 
-.scnd-section--text p {
+.scnd-section--text p, .frth-section--text p {
   width: 75%;
   margin: 7vh auto 7vh auto;
   line-height: 1.6em;
@@ -194,6 +196,24 @@ ul, li, nav {
   -webkit-text-align-last: center;
 }
 
+.trd-section {
+  height: 120vh;
+  display: flex;
+  background: #B5E8D5 url('../img/sorbet.png') no-repeat;
+  background-position: center;
+  background-size: 130%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.frth-section--img {
+  background: url('../img/tables.jpg') no-repeat;
+  background-size: auto 105%;
+  background-position: 82%;
+  width: 50%;
+}
 
 /* -------------------------------- MEDIA QUERIES --------------------------------------------*/
 
@@ -209,7 +229,7 @@ ul, li, nav {
     background-size: auto 65%;
   }
   
-  .glacerie h2 {
+  .glacerie h2, .trd-section--text h2 {
     font-size: 3.5vw;
   }
   
@@ -226,6 +246,10 @@ ul, li, nav {
   .btn--menu {
     margin-bottom: 30vh;
   }
+  
+  .trd-section {
+    background-size: 150%;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -239,7 +263,7 @@ ul, li, nav {
 }
 
 @media screen and (max-width: 750px) {
-  .fst-section {
+  .fst-section, .trd-section {
     height: 105vh;
   }
   
@@ -273,11 +297,11 @@ ul, li, nav {
     justify-content: center;
   }
   
-  .glacerie h1 {
+  .glacerie h1, .trd-section--text h1 {
     font-size: 16vw;
   }
   
-  .glacerie h2 {
+  .glacerie h2, .trd-section--text h2 {
     font-size: 5.5vw;
   }
   
@@ -290,11 +314,11 @@ ul, li, nav {
     margin-bottom: 0;
   }
   
-  .scnd-section--text h2 {
+  .scnd-section--text h2, .frth-section--text h2 {
     font-size: 5vw;
   }
   
-  .scnd-section--text h3 {
+  .scnd-section--text h3, .frth-section--text h3 {
     font-size: 3vw;
   }
 
@@ -304,6 +328,19 @@ ul, li, nav {
 
   .fst-section {
     height: 90vh;
+  }
+  
+  .trd-section {
+    background-size: 165%;
+    justify-content: space-between;
+  }
+  
+  .trd-section--text h2 {
+    margin-top: 5vh;
+  }
+  
+  .trd-section--btn {
+    margin-bottom: 5vh;
   }
   
   .top-addr {
@@ -354,27 +391,48 @@ ul, li, nav {
     flex: 3;
   }
 
-  .scnd-section--text {
+  .scnd-section--text, .frth-section--text {
     width: 100%;
     flex: 5;
   }
   
-  .scnd-section--text h2 {
+  .scnd-section--text h2, .frth-section--text h2 {
     font-size: 8vw;
   }
 
-  .scnd-section--text h3 {
+  .scnd-section--text h3, .frth-section--text h3 {
     font-size: 6.2vw;
     font-weight: normal;
+  }
+  
+  .trd-section {
+    height: 92vh;
+    background-size: 190%;
+  }
+  
+  .frth-section {
+    height: 130vh;
+    flex-direction: column;
+  }
+  
+  .frth-section--img {
+    background-position: bottom center;
+    width: 100%;
+    flex: 3;
   }
 }
 
 @media screen and (max-width: 380px) {
-  .fst-section h2 {
+  .fst-section h2, .trd-section h2 {
     font-size: 7vw;
   }
   
   .btn {
     font-size: 5.5vw;
+  }
+  
+  .trd-section {
+    background-size: 240%;
+    height: 88vh;
   }
 }
